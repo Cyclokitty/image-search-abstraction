@@ -1,0 +1,33 @@
+{
+  "name": "image-search",
+  "version": "1.0.0",
+  "description": "Image search abstraction layer project for Free Code Camp.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bing",
+    "search",
+    "images",
+    "abstraction",
+    "node",
+    "express",
+    "mongodb",
+    "paginate",
+    "search",
+    "strings"
+  ],
+  "author": "Laura Veee",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1",
+    "google-images": "^2.0.0",
+    "mongodb": "^2.2.22",
+    "node-google-image-search": "^1.0.3"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
+  }
+}
