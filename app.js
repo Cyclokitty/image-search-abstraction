@@ -16,7 +16,7 @@ app.get('/api/imagesearch', (req, res) => {
   MongoClient.connect('process.env.MONGODB_URI', (err, db) => {
     assert.equal(null, err);
     console.log('Connected to MongoDB server.');
-    db.collection('searched').find().sort({when: -1}).toArray().then((docs) => {
+    db.collection('absmachine').find().sort({when: -1}).toArray().then((docs) => {
         console.log(JSON.stringify(docs, undefined, 2));
         let terms = [];
         docs.map((doc) => {
@@ -52,7 +52,7 @@ app.get('/api/imagesearch/:topic', (req, res) => {
   MongoClient.connect('process.env.MONGODB_URI', (err, db) => {
     assert.equal(null, err);
     console.log('Connected to MongoDB server.');
-    db.collection('searched').insertOne({
+    db.collection('absmachine').insertOne({
       topic: topic,
       when: when
     }, (err, result) => {
