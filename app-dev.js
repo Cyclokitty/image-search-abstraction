@@ -13,7 +13,7 @@ app.get('/', (req,res) => {
 });
 
 app.get('/api/imagesearch', (req, res) => {
-  MongoClient.connect('process.env.MONGODB_URI', (err, db) => {
+  MongoClient.connect('mongodb://localhost:27017/imageSearch', (err, db) => {
     assert.equal(null, err);
     console.log('Connected to MongoDB server.');
     db.collection('searched').find().sort({when: -1}).toArray().then((docs) => {
@@ -49,7 +49,7 @@ app.get('/api/imagesearch/:topic', (req, res) => {
     res.json(info);
   }, 0, offset);
   console.log(topic, offset, when);
-  MongoClient.connect('process.env.MONGODB_URI', (err, db) => {
+  MongoClient.connect('mongodb://localhost:27017/imageSearch', (err, db) => {
     assert.equal(null, err);
     console.log('Connected to MongoDB server.');
     db.collection('searched').insertOne({
