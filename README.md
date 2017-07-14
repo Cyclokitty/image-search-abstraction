@@ -17,3 +17,6 @@ You can choose your topic and limit the number of results returned by Google.
 The app-dev.js file is for local development and testing.
 
 The app.js is the production file.
+
+**Where to find the web site**
+[image search machine](https://ruddy-shelf.glitch.me/)
